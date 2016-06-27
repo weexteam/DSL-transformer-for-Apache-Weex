@@ -16,7 +16,7 @@
     "weex"
   ],
   "author": "songsiqi <songsiqi2006@126.com>",
-  "license": "Apache",
+  "license": "GPL-3.0",
   "bin": {
     "transformer": "./bin/transformer.js"
   },
