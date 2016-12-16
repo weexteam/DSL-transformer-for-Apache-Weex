@@ -34,7 +34,7 @@ describe('print logs', function () {
       {name: 'foo', reason: 'NOTE: `value` could be written as text content in <text>', line: 4, column: 5},
       {name: 'foo', reason: 'ERROR: tag `tabheader` should not have children', line: 5, column: 5},
       {name: 'foo', reason: 'ERROR: tag name `text` should just have one text node only', line: 6, column: 5},
-      {name: 'foo', reason: 'NOTE: property value `200px` is autofixed to `200`', line: 12, column: 5},
+      {name: 'foo', reason: 'NOTE: unit `px` is not supported and property value `200px` is autofixed to `200`', line: 12, column: 5},
       {name: 'foo', reason: 'WARNING: `line-height` is not a standard property name', line: 13, column: 5},
       {name: 'foo', reason: 'ERROR: property value `stretch` is not supported for `justify-content` (supported values are: `flex-start`|`flex-end`|`center`|`space-between`)', line: 14, column: 5},
       {name: 'foo', reason: 'ERROR: property value `center` is not supported for `height` (only number and pixel values are supported)', line: 15, column: 5},
@@ -60,7 +60,7 @@ describe('print logs', function () {
     expect(logs).is.an.array
     expect(logs.length).eql(3)
     expect(logs).eql([{name: 'foo', reason: 'NOTE: property value `red` is autofixed to `#FF0000`', line: 1, column: 22},
-      {name: 'foo', reason: 'NOTE: property value `200px` is autofixed to `200`', line: 1, column: 116},
+      {name: 'foo', reason: 'NOTE: unit `px` is not supported and property value `200px` is autofixed to `200`', line: 1, column: 116},
       {name: 'foo', reason: 'WARNING: `line-height` is not a standard property name', line: 1, column: 130}])
   })
 
@@ -78,10 +78,10 @@ describe('print logs', function () {
     expect(logs).is.an.array
     expect(logs.length).eql(6)
     expect(logs).eql([{name: 'foo', reason: 'NOTE: property value `red` is autofixed to `#FF0000`', line: 18, column: 5},
-      {name: 'foo', reason: 'NOTE: property value `200px` is autofixed to `200`', line: 25, column: 5},
+      {name: 'foo', reason: 'NOTE: unit `px` is not supported and property value `200px` is autofixed to `200`', line: 25, column: 5},
       {name: 'foo', reason: 'WARNING: `line-height` is not a standard property name', line: 26, column: 5},
       {name: 'bar', reason: 'NOTE: property value `yellow` is autofixed to `#FFFF00`', line: 4, column: 7},
-      {name: 'bar', reason: 'NOTE: property value `100px` is autofixed to `100`', line: 10, column: 7},
+      {name: 'bar', reason: 'NOTE: unit `px` is not supported and property value `100px` is autofixed to `100`', line: 10, column: 7},
       {name: 'bar', reason: 'WARNING: `line-height` is not a standard property name', line: 11, column: 7}])
   })
 
@@ -99,13 +99,13 @@ describe('print logs', function () {
     expect(logs).is.an.array
     expect(logs.length).eql(9)
     expect(logs).eql([{name: 'foo', reason: 'NOTE: property value `red` is autofixed to `#FF0000`', line: 33, column: 5},
-      {name: 'foo', reason: 'NOTE: property value `200px` is autofixed to `200`', line: 41, column: 5},
+      {name: 'foo', reason: 'NOTE: unit `px` is not supported and property value `200px` is autofixed to `200`', line: 41, column: 5},
       {name: 'foo', reason: 'WARNING: `line-height` is not a standard property name', line: 42, column: 5},
       {name: 'bar', reason: 'NOTE: property value `yellow` is autofixed to `#FFFF00`', line: 4, column: 7},
-      {name: 'bar', reason: 'NOTE: property value `100px` is autofixed to `100`', line: 10, column: 7},
+      {name: 'bar', reason: 'NOTE: unit `px` is not supported and property value `100px` is autofixed to `100`', line: 10, column: 7},
       {name: 'bar', reason: 'WARNING: `line-height` is not a standard property name', line: 11, column: 7},
       {name: 'baz', reason: 'NOTE: property value `green` is autofixed to `#008000`', line: 19, column: 7},
-      {name: 'baz', reason: 'NOTE: property value `50px` is autofixed to `50`', line: 25, column: 7},
+      {name: 'baz', reason: 'NOTE: unit `px` is not supported and property value `50px` is autofixed to `50`', line: 25, column: 7},
       {name: 'baz', reason: 'WARNING: `line-height` is not a standard property name', line: 26, column: 7}])
   })
 
@@ -154,7 +154,7 @@ describe('log levels', function () {
       {name: 'foo', reason: 'NOTE: `value` could be written as text content in <text>', line: 4, column: 5},
       {name: 'foo', reason: 'ERROR: tag `tabheader` should not have children', line: 5, column: 5},
       {name: 'foo', reason: 'ERROR: tag name `text` should just have one text node only', line: 6, column: 5},
-      {name: 'foo', reason: 'NOTE: property value `200px` is autofixed to `200`', line: 12, column: 5},
+      {name: 'foo', reason: 'NOTE: unit `px` is not supported and property value `200px` is autofixed to `200`', line: 12, column: 5},
       {name: 'foo', reason: 'WARNING: `line-height` is not a standard property name', line: 13, column: 5},
       {name: 'foo', reason: 'ERROR: property value `stretch` is not supported for `justify-content` (supported values are: `flex-start`|`flex-end`|`center`|`space-between`)', line: 14, column: 5},
       {name: 'foo', reason: 'ERROR: property value `center` is not supported for `height` (only number and pixel values are supported)', line: 15, column: 5},

@@ -99,7 +99,7 @@ describe('parse', function () {
     expect(logs).is.an.array
     expect(logs.length).eql(2)
     expect(logs).eql([{name: 'foo', reason: 'NOTE: property value `red` is autofixed to `#FF0000`', line: 6, column: 11},
-      {name: 'foo', reason: 'NOTE: property value `48px` is autofixed to `48`', line: 6, column: 23}])
+      {name: 'foo', reason: 'NOTE: unit `px` is not supported and property value `48px` is autofixed to `48`', line: 6, column: 23}])
   })
 
   it('parse content with image', function () {
