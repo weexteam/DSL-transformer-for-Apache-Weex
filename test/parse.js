@@ -164,7 +164,8 @@ describe('parse', function () {
     expect(logs).is.an.array
     expect(logs.length).eql(0)
 
-    var output = results.reverse().map(function (item) {return item.content}).join('\n\n// module\n\n')
+    var output = '// { "framework": "Weex" }\n\n'
+    output += results.reverse().map(function (item) {return item.content}).join('\n\n// module\n\n')
     expect(output).eql(removeEndingLineBreak(readFile(path + '/component.bundle')))
   })
 

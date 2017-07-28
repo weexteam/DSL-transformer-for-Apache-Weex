@@ -16,7 +16,9 @@ function transform(name, code, path, elements, config) {
 
   parser.parse(name, code, results, bootstrapParams, thirdPartyJs, logs, elements, path, oldFormat)
 
-  var output = results.reverse().map(function (item) {
+  var output = '// { "framework": "Weex" }\n\n'
+
+  output += results.reverse().map(function (item) {
     return item.content
   }).join('\n\n// module\n\n')
 

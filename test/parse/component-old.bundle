@@ -1,3 +1,5 @@
+// { "framework": "Weex" }
+
 register('taobao-item', {
 
     data: function () {
